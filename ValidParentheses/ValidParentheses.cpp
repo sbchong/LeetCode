@@ -16,6 +16,7 @@ Note that an empty string is also considered valid.
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 using namespace std;
 
 bool isValid(string s) {
