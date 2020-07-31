@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValidParentheses", "ValidPa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RomanToInt", "RomanToInt\RomanToInt.vcxproj", "{EE3B3BD6-79B2-42E6-B280-48BF0DFD9308}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeTwoSortedLists", "MergeTwoSortedLists\MergeTwoSortedLists.vcxproj", "{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{EE3B3BD6-79B2-42E6-B280-48BF0DFD9308}.Release|x64.Build.0 = Release|x64
 		{EE3B3BD6-79B2-42E6-B280-48BF0DFD9308}.Release|x86.ActiveCfg = Release|Win32
 		{EE3B3BD6-79B2-42E6-B280-48BF0DFD9308}.Release|x86.Build.0 = Release|Win32
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Debug|x64.ActiveCfg = Debug|x64
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Debug|x64.Build.0 = Debug|x64
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Debug|x86.ActiveCfg = Debug|Win32
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Debug|x86.Build.0 = Debug|Win32
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x64.ActiveCfg = Release|x64
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x64.Build.0 = Release|x64
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x86.ActiveCfg = Release|Win32
+		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

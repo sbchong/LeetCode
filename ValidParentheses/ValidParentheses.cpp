@@ -20,6 +20,41 @@ Note that an empty string is also considered valid.
 using namespace std;
 
 bool isValid(string s) {
+    int count = s.size();
+    if (count % 2 != 0) {
+        return false;
+    }
+
+    char* p = new char;
+    int size = 0;
+
+    for (int i = 0; i < count; i++) {
+        if (s[i] == ')') {
+
+            if (size <= 0 || *(--p) != '(')
+                return false;
+
+            size--;
+        }
+        else if (s[i] == ']' || s[i] == '}') {
+            if (size <= 0 || *(--p) != s[i] - 2)
+                return false;
+
+            size--;
+        }
+        else { 
+            *p = s[i];
+            size++; 
+            p++;
+        }
+    }
+    if (size > 0) {
+        return false;
+    }
+    return true;
+}
+
+bool isValid3(string s) {
     int size = s.size();
     if (size % 2 != 0) {
         return false;
@@ -111,8 +146,8 @@ int main()
 {
     cout << "------------------start--------------" << endl;
 
-    //string s = "(([]){})";
-    string s = "){";
+    string s = "(([]){})";
+    //string s = "){";
     cout << "\t" << isValid(s) << endl;
 }
 
