@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RomanToInt", "RomanToInt\Ro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeTwoSortedLists", "MergeTwoSortedLists\MergeTwoSortedLists.vcxproj", "{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AugustDay1_DetectCapital", "AugustDay1_DetectCapital\AugustDay1_DetectCapital.vcxproj", "{35B9E34E-80E2-49B2-89C7-1B4C891754ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x64.Build.0 = Release|x64
 		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x86.ActiveCfg = Release|Win32
 		{5BE1DE22-0A94-4AEF-9D86-12A4B0CFD4A4}.Release|x86.Build.0 = Release|Win32
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Debug|x64.ActiveCfg = Debug|x64
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Debug|x64.Build.0 = Debug|x64
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Debug|x86.ActiveCfg = Debug|Win32
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Debug|x86.Build.0 = Debug|Win32
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Release|x64.ActiveCfg = Release|x64
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Release|x64.Build.0 = Release|x64
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Release|x86.ActiveCfg = Release|Win32
+		{35B9E34E-80E2-49B2-89C7-1B4C891754ED}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
