@@ -6,7 +6,7 @@
 #include <vector>
 using namespace std;
 
-string longestCommonPrefixString(vector<string>& strs) {
+string longestCommonPrefixStringL(vector<string>& strs) {
     
     string* p = &strs[0];
 

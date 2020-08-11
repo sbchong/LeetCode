@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-bool isPowerOfFour(int num) {
+bool isPowerOfFourL(int num) {
     if (num <= 0)return false;
     if ((num & num - 1) == 0)
         if ((num & 1431655765) == num)
@@ -11,7 +11,7 @@ bool isPowerOfFour(int num) {
 }
 int main()
 {
-    int i=isPowerOfFour(1024);
+    int i=isPowerOfFourL(1024);
     std::cout << i<<"\n";
 }
 

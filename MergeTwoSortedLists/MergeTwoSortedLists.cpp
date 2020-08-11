@@ -13,7 +13,7 @@
 #include <vector>
 using namespace std;
 
-ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+ListNode* mergeTwoListsL(ListNode* l1, ListNode* l2) {
     vector<int> x;
     while (l1) {
         if (l1->val > l2->val) {
@@ -51,7 +51,7 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
      ListNode* l1 = &l11;
      ListNode* l2 = &l22;
 
-     ListNode* ln= mergeTwoLists(l1, l2);
+     ListNode* ln= mergeTwoListsL(l1, l2);
 
      std::cout << "Hello World!\n";
  }

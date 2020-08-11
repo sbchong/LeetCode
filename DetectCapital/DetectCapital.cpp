@@ -6,7 +6,7 @@
 using namespace std;
 
 
-bool detectCapitalUse(string word) {
+bool detectCapitalUseL(string word) {
     int length = word.length() - 1;
     char* c = &word[0];
 
@@ -43,7 +43,7 @@ bool detectCapitalUse(string word) {
 int main()
 {
     string s = "FFFFFFFFFFFFFFFFFff";
-    bool result = detectCapitalUse(s);
+    bool result = detectCapitalUseL(s);
     std::cout << (result ? "success" : "faild") << endl;
 }
 

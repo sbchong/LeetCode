@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-bool IsPalindrome(string s) {
+bool IsPalindromeL(string s) {
     if (s == "") {
         return true;
     }
@@ -39,7 +39,7 @@ bool IsPalindrome(string s) {
 int main()
 {
     string s = "A man, a plan, a canal: Panama";
-    std::cout << IsPalindrome(s) ? "success" : "faild";
+    std::cout << IsPalindromeL(s) ? "success" : "faild";
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单

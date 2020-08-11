@@ -23,7 +23,7 @@
 #include <string>
 using namespace std;
 
-int titleToNumber(string s) {
+int titleToNumberL(string s) {
     int length = s.length();
 
     if (length == 0 || length > 7)return 0;
@@ -39,7 +39,7 @@ int titleToNumber(string s) {
 int main()
 {
     string s = "ZY";
-    std::cout << titleToNumber(s)<<endl;
+    std::cout << titleToNumberL(s)<<endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
