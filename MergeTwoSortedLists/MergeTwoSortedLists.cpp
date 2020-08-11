@@ -10,16 +10,48 @@
  };
  
 #include <iostream>
+#include <vector>
+using namespace std;
 
- ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
-     return NULL;
- }
+ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+    vector<int> x;
+    while (l1) {
+        if (l1->val > l2->val) {
+            x.push_back(l2->val);
+            l2 = l2->next;
+        }
+        else {
+            x.push_back(l1->val);
+            l1 = l1->next;
+        }
+    }
+    while (l2) {
+        x.push_back(l2->val);
+        l2 = l2->next;
+    }
+
+    int size = x.size();
+    ListNode* ln = new ListNode(0, NULL);
+    while (size > 0) {
+        ListNode* p = new ListNode{ x.back() ,ln->next };
+        ln->next = p;
+        x.pop_back();
+        size--;
+    }
+    ln = ln->next;
+    return ln;
+}
 
  int main()
  {
-     ListNode l1 = { 1,&(ListNode  { 1,NULL }) };
+     ListNode l11 = { 1,&(ListNode  { 2,&(ListNode  { 4,NULL }) }) };
 
-     ListNode l2(1, &l1);
+     ListNode l22(1, &(ListNode{ 3,&(ListNode  { 4,NULL }) }));
+
+     ListNode* l1 = &l11;
+     ListNode* l2 = &l22;
+
+     ListNode* ln= mergeTwoLists(l1, l2);
 
      std::cout << "Hello World!\n";
  }
