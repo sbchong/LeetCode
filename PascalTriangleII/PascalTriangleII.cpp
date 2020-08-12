@@ -5,7 +5,7 @@
 #include <vector>
 
 using namespace std;
-vector<int> getRow(int rowIndex) {
+vector<int> getRow_F(int rowIndex) {
     vector<vector<int> >arr(rowIndex+1);
     for (int i = 0; i <= rowIndex; i++)
     {
