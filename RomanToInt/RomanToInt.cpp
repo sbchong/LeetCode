@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-int romanToInt(string s) {
+int romanToIntL(string s) {
     int result = 0;
 
     int index = s.length() - 1;
@@ -78,7 +78,7 @@ int main()
     string s;
     while (true) {
         getline(cin, s);
-        cout << romanToInt(s)<<"\n";
+        cout << romanToIntL(s)<<"\n";
     }
 }
 

@@ -19,7 +19,7 @@ Note that an empty string is also considered valid.
 #include <cmath>
 using namespace std;
 
-bool isValid(string s) {
+bool isValidL(string s) {
     int count = s.size();
     if (count % 2 != 0) {
         return false;
@@ -148,7 +148,7 @@ int main()
 
     string s = "(([]){})";
     //string s = "){";
-    cout << "\t" << isValid(s) << endl;
+    cout << "\t" << isValidL(s) << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
