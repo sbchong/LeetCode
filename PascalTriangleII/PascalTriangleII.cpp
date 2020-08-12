@@ -1,6 +1,10 @@
 ﻿// PascalTriangleII.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
+///Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal's triangle.
+/// Input: 3
+///Output: [1, 3, 3, 1]
+
 #include <iostream>
 #include <vector>
 
@@ -22,12 +26,28 @@ vector<int> getRow_F(int rowIndex) {
     }
     return arr[rowIndex];
 }
+
+vector<int> getRowL(int rowIndex) {
+    vector<vector<int>> triangle;
+    for (int i = 0; i <= rowIndex; i++) {
+        vector<int> row;
+        for (int j = 0; j <= i; j++) {
+            if (j == 0 || j == i)
+                row.push_back(1);
+            else
+                row.push_back(triangle[i - 1][j - 1] + triangle[i - 1][j]);
+        }
+        triangle.push_back(row);
+    }
+    return triangle.back();
+}
+
 int main()
 {
     int rowIndex = 4;
     //cout << rowIndex << endl;
-    vector<int> arr = getRow(rowIndex);
-    for (int i = 0; i < rowIndex + 1; i++)
+    vector<int> arr = getRowL(rowIndex);
+    for (int i = 0; i <= rowIndex; i++)
     {
         cout << arr[i]<<"\t" ;
     }
