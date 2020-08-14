@@ -1,11 +1,22 @@
 ﻿// IteratorforCombination.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
+///今日挑战：设计一个自定义数据枚举器。要求 next() 方法用来获取下一个可枚举值，hasNext() 方法用来判断是否存在下一个可枚举值
+/// 
+/// 涉及C++面向对象编程
+/// 
+/// 官方建议：在一开始就生成所有可枚举的组合；最好使用位掩码运算来生成
+
 #include <iostream>
+#include "CombinationIteratorL.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    CombinationIteratorL* obj = new CombinationIteratorL("abcdefg", 5);
+
+    //如果存在下一个枚举值，则打印
+    while (obj->hasNext())
+        std::cout << obj->next() << endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
