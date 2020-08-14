@@ -2,10 +2,51 @@
 //
 
 #include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int longestPalindromeF(string s) {
+    int length = s.size();
+    sort(s.begin(), s.end());
+    if (length == 0)
+        return 0;
+    vector<int> s1;
+    for (int i = 0; i < length;) {
+       
+        if (i == length - 2 && s[i] == s[i + 1])
+        {
+            s1.push_back(s[i]);
+            s1.push_back(s[i + 1]);
+            break;
+        }
+        else if (s[i] == s[i + 1])
+           {
+           s1.push_back(s[i]);
+           s1.push_back(s[i + 1]);
+           i = i + 2;
+           } 
+        else
+        {
+            i = i + 1;
+            continue;
+        }                 
+    }
+
+    int num = s1.size();
+    if (num == length)
+        return num;
+    else if(num<length)
+       return num + 1;
+
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    string s = "abccccdd";
+    std::cout << longestPalindrome(s)<<endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
