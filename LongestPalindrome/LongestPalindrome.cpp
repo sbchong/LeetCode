@@ -46,7 +46,7 @@ int longestPalindromeF(string s) {
 int main()
 {
     string s = "abccccdd";
-    std::cout << longestPalindrome(s)<<endl;
+    std::cout << longestPalindromeF(s)<<endl;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
