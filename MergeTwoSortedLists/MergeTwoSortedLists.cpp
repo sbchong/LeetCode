@@ -42,6 +42,46 @@ ListNode* mergeTwoListsL(ListNode* l1, ListNode* l2) {
     return ln;
 }
 
+ListNode* mergeTwoLists2(ListNode* l1, ListNode* l2) {
+    ListNode* ln = NULL;
+    ListNode* head = NULL;
+    ListNode* end = NULL;
+
+    int i = 0;
+
+    while (l1) {
+        ListNode* p = new ListNode{ 0 ,NULL };
+        if (l2) {
+            if (l1->val > l2->val) {
+                p->val = l2->val;
+                l2 = l2->next;
+            }
+            else {
+                p->val = l1->val;
+                l1 = l1->next;
+            }
+            if (i == 0) ln = head = end = p;
+            else {
+                ln->next = p;
+                ln = p;
+            }
+            i++;
+        }
+        else {
+            if (i == 0) ln = head = end = l1;
+            else  ln->next = l1;
+            break;
+        }
+    }
+    if (l2) {
+        if (i == 0)
+            ln = head = end = l2;
+        else  ln->next = l2;
+    }
+
+    return head;
+}
+
  int main()
  {
      ListNode l11 = { 1,&(ListNode  { 2,&(ListNode  { 4,NULL }) }) };
@@ -49,9 +89,9 @@ ListNode* mergeTwoListsL(ListNode* l1, ListNode* l2) {
      ListNode l22(1, &(ListNode{ 3,&(ListNode  { 4,NULL }) }));
 
      ListNode* l1 = &l11;
-     ListNode* l2 = &l22;
+     ListNode* l2 = NULL;
 
-     ListNode* ln= mergeTwoListsL(l1, l2);
+     ListNode* ln= mergeTwoLists2(l1, l2);
 
      std::cout << "Hello World!\n";
  }
@@ -66,3 +106,39 @@ ListNode* mergeTwoListsL(ListNode* l1, ListNode* l2) {
 //   4. 使用错误列表窗口查看错误
 //   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
 //   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
+
+
+ class Solution {
+ public:
+     ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+         ListNode* ln;
+         ListNode* head = ln;
+         ListNode* end = ln;
+
+         int i = 0;
+
+         while (l1) {
+             ListNode* p = new ListNode{ 0 ,NULL };
+             if (l1->val > l2->val) {
+                 p->val = l2->val;
+                 l2 = l2->next;
+             }
+             else {
+                 p->val = l1->val;
+                 l1 = l1->next;
+             }
+             if (i == 0) ln = head = end = p;
+             else {
+                 ln->next = p;
+                 ln = p;
+             }
+             i++;
+         }
+         if (l2) {
+             ln->next = l2;
+         }
+
+         return head;
+
+     }
+ };
